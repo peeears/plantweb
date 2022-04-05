@@ -116,6 +116,7 @@ header {
 
 .row {
   height: 100%;
+  max-width: 95%;
   min-width: 20%;
   display: flex;
   margin-left: 10px;
