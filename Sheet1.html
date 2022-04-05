@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Houseplant From the Wild</title>
+    <link rel="icon" type="png" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet"> 
+  </head>
+
+  <body>
+    <div class="navigate">
+
+      <div>
+        <input type="checkbox" id="introCheck" />
+        <label class="introduction">Houseplants From the Wild</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="nameCheck" />
+        <label class="name">Names</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="otherCheck" />
+        <label class="otherName">Common names </label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="originalCheck" />
+        <label class="original">Original</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="whereCheck" />
+        <label class="where">Thrive on...</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="spritualCheck" />
+        <label class="spiritual">Spiritual</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="storyCheck" />
+        <label class="story">Stories</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="plantCheck" />
+        <label class="plant">Plants</label>
+      </div>
+    </div>
+
+    <div class="container">
+        <!-- <div class="block"> -->
+          <!-- <div class="el"> -->
+            <div class="row__el"></div>
+          </div>
+        </div>
+      </div>
+      <ul>
+        {% for row in Sheet1 %}
+        <li>
+          <div class="row">
+            <span class="name">
+              <span style="font-family:BodoniO;color:green">e
+              </span>{{ row['Species Name'] }}
+            </span>
+            <span class="otherName"><span style="font-family:BodoniO;color:green">a</span>{{ row['othername'] }}</span>
+            <span class="original"><span style="font-family:BodoniO;color:green">f</span>{{ row['original'] }}</span>
+            <span class="where"><span style="font-family:BodoniO;color:green">h</span>{{ row['thrive on..?'] }}</span>
+            <span class="spiritual"><span style="font-family:BodoniO;color:green">l</span>
+              {{ row['representaive/cultural meaning/uses/symbolism'] }}
+            </span>
+            <span class="story"><span style="font-family:BodoniO;color:green">i</span>
+              {{ row['domesticated/travel'] }} {% image row['images'],
+              "image__inline" %}
+            </span>
+            <div class="plantImage">{% image row['plant-images'] %}</div>
+          </div>
+
+          
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="intro">
+            <p>Today's common houseplants may have come from an environment unrelated to where they are now. From soil to potted plants, the process of domestication of plants, from biological names to nicknames, has given them a new definition different from nature, and domestic plants have become something like a "symbol" that contains new meanings. Focusing on household plants as symbols of diversity in Immigrants in this nation.  And the meanings that people put in these plants reveals the relationship of traditional concepts in new contexts.
+</p>
+            </div>
+    </div>
+
+
+    <div class="lightbox hidden">
+      <!-- JS dynamically update the src attribute, with the image you clicked on -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg" />
+    </div>
+
+    <!-- Scripts go at the bottom of your <body> element, below your HTML.
+      Here's a link to the jquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- And here's a link to our javascript, written in an external js file called main.js -->
+    <script src="main.js"></script>
+  </body>
+</html>
