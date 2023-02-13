@@ -2,10 +2,14 @@
   font-family: BodoniO;
   src: url(BodoniOrnaments.ttf);
 }
+@font-face {
+  font-family: "Trattatello";
+  src: url("Trattatello.woff"), url("Trattatello.woff2");
+}
 
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
   line-height: 1.42857143;
   color: black;
   background-color: gainsboro;
@@ -13,6 +17,8 @@ body {
   overflow-x: scroll;
   overflow-y: hidden;
   /* white-space: nowrap; */
+  height: 100vh;
+  margin: 0;
 }
 
 input.checkbox {
@@ -32,6 +38,7 @@ input.checkbox {
   left: 0;
   padding-left: 1%;
   line-height: 1.6;
+  margin-top: 8px;
 }
 
 .navigate::after {
@@ -41,9 +48,13 @@ input.checkbox {
   background: gainsboro;
   position: absolute;
   inset: 0;
-  left: -80px;
+  /* left: -80px; */
   filter: blur(30px);
   z-index: -10;
+}
+
+.navigate-intro::after {
+  width: 0;
 }
 
 .container {
@@ -71,7 +82,8 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: row;
-  margin-left: 100px;
+  margin-left: 108px;
+  margin-top: 32px;
   height: 100vh;
 }
 
@@ -181,12 +193,12 @@ header {
 }
 
 #introCheck {
-  font-family: Trattatello;
+  font-family: "Trattatello";
 }
 
 .introduction {
   line-height: 1.42857143;
-  font-family: Trattatello;
+  font-family: "Trattatello";
   font-size: 25px;
   color: white;
 }
@@ -272,22 +284,24 @@ header {
   color: transparent;
 } */
 
-@media only screen and (min-width: 600px) {
-  .intro {
-    line-height: 1.42857143;
-    color: white;
-    font-family: Trattatello;
-    font-size: 27px;
-    letter-spacing: 0.5px;
-    word-spacing: 0.5px;
-    position: fixed;
-    display: none;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-  }
+.intro {
+  line-height: 1.42857143;
+  color: white;
+  font-family: "Trattatello";
+  font-size: 27px;
+  letter-spacing: 0.5px;
+  word-spacing: 0.5px;
+  position: fixed;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
+
+/* @media only screen and (min-width: 600px) {
+  
+} */
 
 @media only screen and (max-width: 600px) {
   .plantImage {
@@ -308,45 +322,46 @@ header {
   } */
 
   ul {
-    list-style: none;
-    display: flex;
+    /* list-style: none; */
+    /* display: flex; */
     flex-direction: column;
-    margin-left: 100px;
+    /* margin-left: 100px; */
   }
 
   body {
-    background-color: gainsboro;
+    /* background-color: gainsboro; */
     overflow-y: auto;
     overflow-x: hidden;
   }
 
   .intro {
-    line-height: 1.42857143;
-    color: white;
-    font-family: Trattatello;
+    /* line-height: 1.42857143; */
+    /* color: white; */
+    /* font-family: "Trattatello"; */
     font-size: 20px;
-    letter-spacing: 0.5px;
-    word-spacing: 0.5px;
-    position: fixed;
-    display: none;
-    left: 50%;
+    /* letter-spacing: 0.5px; */
+    /* word-spacing: 0.5px; */
+    /* position: fixed; */
+    /* display: none; */
+    /* left: 50%; */
     bottom: 0%;
     margin: 0;
     width: 90%;
     transform: translateX(-50%);
-    z-index: 1000;
+    /* z-index: 1000; */
   }
 
   .navigate::after {
     display: none;
-    content: "";
-    width: 90%;
-    height: 115%;
-    background: gainsboro;
-    position: absolute;
-    inset: 0;
-    left: -80px;
-    filter: blur(30px);
-    z-index: -10;
+    /* content: ""; */
+    /* width: 90%; */
+    /* height: 115%; */
+    /* background: gainsboro; */
+    /* position: absolute; */
+    /* inset: 0; */
+    /* left: -80px; */
+    /* filter: blur(30px); */
+    /* z-index: -10; */
   }
+  
 }
