@@ -1,58 +1,58 @@
 $("#introCheck").change(function () {
-  $(".intro").hide();
+  $("div.intro").hide();
   if ($("#introCheck").is(":checked")) {
     $(".intro").show();
   }
 });
 
 $("#nameCheck").change(function () {
-  $(".name").hide();
+  $("span.name").hide();
   if ($("#nameCheck").is(":checked")) {
     $(".name").show();
   }
 });
 
 $("#otherCheck").change(function () {
-  $(".otherName").hide();
+  $("span.otherName").hide();
   if ($("#otherCheck").is(":checked")) {
     $(".otherName").show();
   }
 });
 
 $("#originalCheck").change(function () {
-  $(".original").hide();
+  $("span.original").hide();
   if ($("#originalCheck").is(":checked")) {
     $(".original").show();
   }
 });
 
 $("#whereCheck").change(function () {
-  $(".where").hide();
+  $("span.where").hide();
   if ($("#whereCheck").is(":checked")) {
     $(".where").show();
   }
 });
 
 $("#spritualCheck").change(function () {
-  $(".spiritual").hide();
+  $("span.spiritual").hide();
   if ($("#spritualCheck").is(":checked")) {
     $(".spiritual").show();
   }
 });
 
 $("#storyCheck").change(function () {
-  $(".story").hide();
+  $("span.story").hide();
   if ($("#storyCheck").is(":checked")) {
     $(".story").show();
   }
 });
 
 $("#plantCheck").change(function () {
-  $(".plantImage").hide();
-  $(".plant").hide();
+  $("div.plantImage").hide();
+  // $(".plant").hide();
   if ($("#plantCheck").is(":checked")) {
     $(".plantImage").show();
-    $(".plant").show();
+    // $(".plant").show();
   }
 });
 
