@@ -83,7 +83,7 @@ ul {
   display: flex;
   flex-direction: row;
   margin-left: 108px;
-  margin-top: 32px;
+  margin-top: 20px;
   height: 100vh;
 }
 
@@ -344,7 +344,8 @@ header {
     /* position: fixed; */
     /* display: none; */
     /* left: 50%; */
-    bottom: 0%;
+    top: auto;
+    bottom: 0;
     margin: 0;
     width: 90%;
     transform: translateX(-50%);
